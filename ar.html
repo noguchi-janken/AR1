@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>model-viewer demo</title>    
+    <script type="module" src="https://unpkg.com/@google/model-viewer@1.0.0/dist/model-viewer.min.js"></script>
+  </head>
+  <body>
+	<style>
+		model-viewer {
+		  width: 100%;
+		  height: 640px;
+		  background-color: greenyellow
+		}
+		#custom-ar-button {
+		  font-size: 24px;
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+        }
+	  </style>
+    <model-viewer
+      src="./Noguchi-janken.glb"
+      ios-src="./Noguchi-janken.usdz#callToAction=カートに入れる&checkoutTitle=プロ生ちゃん&checkoutSubtitle=USDZモデル&price=5,000兆円"
+      ar
+      camera-controls
+	  shadow-intensity = 1
+      shadow-softness = 0
+	  quick-look-browsers = "safari chrome"
+    >
+	<button id="custom-ar-button" slot="ar-button">Start AR</button>
+    </model-viewer>
+	
+  </body>
+</html>
